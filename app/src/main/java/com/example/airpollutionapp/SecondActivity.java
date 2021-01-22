@@ -34,8 +34,9 @@ import android.text.TextUtils;
 
 public class SecondActivity  extends AppCompatActivity
 {
-    EditText editText;
     TextView textView;
+    TextView textView2;
+    TextView textView3;
     String delka;
     String sirka;
 
@@ -45,10 +46,10 @@ public class SecondActivity  extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.second_layout);
 
-        editText = findViewById(R.id.second_layout_edittext);
-        editText.setText("Obsah z APIčka zde ");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         textView = (TextView) findViewById(R.id.translated_text);
+        textView2 = (TextView) findViewById(R.id.translated_text2);
+        textView3 = (TextView) findViewById(R.id.translated_text3);
 
         // create the get Intent object
         Intent intent = getIntent();
@@ -88,11 +89,17 @@ public class SecondActivity  extends AppCompatActivity
                             // V PROMENNE translatedText JE ULOZEN VYSLEDEK PREKLADU
                             String translatedText = responseData.getString("country");
                             String translatedText2 = responseData.getString("city");
-                            String translatedText3 = responseData3.getString("maincn");
+                            String translatedText3 = responseData3.getString("aqius");
 
                             // 4. V textView ZOBRAZIME VYSLEDEK PREKLADU
-                            String[] pole = {translatedText,translatedText2,translatedText3};
+                            String[] pole = {translatedText};
                             textView.setText(TextUtils.join(",",pole));
+
+                            String[] pole2 = {translatedText2};
+                            textView2.setText(TextUtils.join(",",pole2));
+
+                            String[] pole3 = {translatedText3};
+                            textView3.setText(TextUtils.join(",",pole3));
 
                         }
                         catch (JSONException e)

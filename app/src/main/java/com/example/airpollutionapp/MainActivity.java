@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
         jzemSirka = (EditText) findViewById(R.id.zemSirka);
         jzemDelka = (EditText) findViewById(R.id.zemDelka);
 
-        Toast.makeText(this, "Button \"Vyhledat\" has been clicked.", Toast.LENGTH_LONG).show();
+       // Toast.makeText(this, "", Toast.LENGTH_LONG).show();
         // get the value which input by user in EditText
         // and convert it to string
         String delka = jzemDelka.getText().toString();
