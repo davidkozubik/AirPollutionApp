@@ -8,6 +8,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".HomeFragment"
     android:background="@color/lightgray">
+
     <TextView
         android:id="@+id/showdescription"
         android:text="Zajímá Vás znečištění vzduchu ve Vašem okolí nebo někde ve světě?"
@@ -75,47 +76,3 @@
         />
 
 </LinearLayout>
-
-    <!-- <?xml version="1.0" encoding="utf-8"?>
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingLeft="8dp"
-        android:paddingRight="8dp"
-        android:orientation="vertical"
-        xmlns:tools="http://schemas.android.com/tools"
-        tools:context=".HomeFragment"
-        android:background="@color/lightgray">
-            <TextView
-                android:id="@+id/showdescription"
-                android:text="Zajímá Vás znečištění vzduchu ve Vašem okolí nebo někde ve světě?"
-                android:layout_gravity="center"
-                android:paddingTop="15dp"
-                android:textSize="20dp"
-                android:textColor="#000000"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                />
-
-        <EditText
-            android:id="@+id/zemSirka"
-            android:layout_width="match_parent"
-            android:paddingTop="40dp"
-            android:layout_height="wrap_content"
-            android:hint="Zadejte zeměpisnou šířku" />
-
-        <EditText
-            android:id="@+id/zemDelka"
-            android:layout_width="match_parent"
-            android:paddingTop="40dp"
-            android:layout_height="wrap_content"
-            android:hint="Zadejte zeměpisnou délku" />
-        <Button
-            android:layout_width="150dp"
-            android:layout_gravity="center"
-            android:layout_height="wrap_content"
-            android:onClick="myButtonClick"
-            android:text="Vyhledat" />
-
-    </LinearLayout>
-    -->

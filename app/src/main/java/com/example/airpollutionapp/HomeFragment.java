@@ -34,34 +34,12 @@ import android.widget.Button;
 public class HomeFragment extends Fragment {
 
     public HomeFragment() {
-        // Required empty public constructor
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         final View v = inflater.inflate(R.layout.fragment_home, container, false);
-        // Inflate the layout for this fragment
-
-
-       /* Button tlacitko = (Button) v.findViewById(R.id.tlacitko);
-        tlacitko.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
-                getTranslationOnClick(v);
-            }
-        });
-*/
         return v;
     }
-/*
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.tlacitko:
-                c *= fComm.fragmentContactActivity(2);
-                break;
-    } */
 }
