@@ -43,6 +43,37 @@
         android:onClick="myButtonClick"
         android:textColor="#FFFFFF"
         android:text="Vyhledat"/>
+
+    <TextView
+        android:id="@+id/showdescription10"
+        android:text="Vyzkoušejte:"
+        android:layout_gravity="center"
+        android:paddingTop="40dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="0dp"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:justificationMode="inter_word"
+        android:textColor="#000000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <TextView
+        android:id="@+id/showdescription9"
+        android:text="Pokud nezadáte žádná data, zobrazí se nejbližší místo v blízkosti Vaší lokality."
+        android:layout_gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="0dp"
+        android:textSize="16dp"
+        android:justificationMode="inter_word"
+        android:textColor="#000000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
 </LinearLayout>
 
     <!-- <?xml version="1.0" encoding="utf-8"?>

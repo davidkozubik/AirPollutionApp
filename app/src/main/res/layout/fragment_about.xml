@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,28 +8,111 @@
     tools:context=".AboutFragment"
     android:background="@color/lightgray">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:id="@+id/showdescriptiontitle"
-        android:text="Informace o aplikaci"
+        android:text="Návod na použití aplikace:"
         android:layout_gravity="center"
-        android:paddingTop="10dp"
-        android:textSize="20dp"
+        android:paddingTop="3dp"
+        android:textSize="18dp"
         android:textStyle="bold"
         android:textColor="#000000"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         />
 
-    <TextView
-        android:id="@+id/showdescription"
-        android:text="Návod na používání aplikace:"
-        android:layout_gravity="center"
-        android:paddingTop="15dp"
-        android:textSize="17dp"
-        android:textColor="#000000"
-        android:layout_width="wrap_content"
+
+
+    <ScrollView android:layout_marginTop="30dp"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        />
+        android:id="@+id/scrollView">
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/showdescription16"
+                android:text="1) Vyhledání místa:"
+                android:layout_gravity="left"
+                android:paddingTop="0dp"
+                android:paddingBottom="0dp"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="@color/orange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <TextView
+                android:id="@+id/showdescription17"
+                android:text="zadejte zeměpisnou šířku a délku místa, ve kterém chcete zjistit znečištění. Pokud se v dané lokalitě nenaleznou stanice zjišťující kvalitu ovzduší, zobrazí se Vám nejbližší místo, které v dané lokalitě měří kvalitu vzduchu."
+                android:layout_gravity="left"
+                android:paddingTop="0dp"
+                android:paddingBottom="0dp"
+                android:textSize="15dp"
+                android:justificationMode="inter_word"
+                android:textColor="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <TextView
+                android:id="@+id/showdescription18"
+                android:text="2) zobrazení výsledků:"
+                android:layout_gravity="left"
+                android:paddingTop="0dp"
+                android:paddingBottom="0dp"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="@color/orange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <TextView
+                android:id="@+id/showdescription19"
+                android:text="Nejprve se Vám zobrazí Index kvality ovzduší. Více informací o indexu kvality ovzduší naleznete pod výsledkem. Poté se Vám ukáže stát a dané město (lokalita), ve kterém sledujete kvalitu ovzduší."
+                android:layout_gravity="left"
+                android:paddingTop="0dp"
+                android:paddingBottom="0dp"
+                android:textSize="15dp"
+                android:justificationMode="inter_word"
+                android:textColor="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <TextView
+                android:id="@+id/showdescription27"
+                android:text="Máte dotazy?"
+                android:layout_gravity="center"
+                android:paddingTop="6dp"
+                android:paddingBottom="0dp"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:textColor="@color/gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+                <TextView
+                    android:id="@+id/showdescription26"
+                    android:text="davidkozubik@icloud.com"
+                    android:layout_gravity="center"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="0dp"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>

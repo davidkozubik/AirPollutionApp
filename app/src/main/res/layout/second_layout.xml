@@ -3,10 +3,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
-    android:paddingTop="8dp"
-    android:paddingBottom="8dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="3dp"
+    android:paddingBottom="3dp"
     android:orientation="vertical"
     android:background="@color/white">
 
@@ -126,7 +126,7 @@
                 android:id="@+id/showdescription8"
                 android:text="Index 0 - 50:"
                 android:layout_gravity="center"
-                android:paddingTop="0dp"
+                android:paddingTop="2dp"
                 android:paddingBottom="0dp"
                 android:textSize="17dp"
                 android:textStyle="bold"
@@ -137,11 +137,12 @@
 
             <TextView
                 android:id="@+id/showdescription9"
-                android:text="Air quality is satisfactory, and air pollution poses little or no risk."
+                android:text="Kvalita ovzduší je uspokojivá a znečištění ovzduší představuje malé nebo žádné riziko."
                 android:layout_gravity="center"
                 android:paddingTop="0dp"
                 android:paddingBottom="0dp"
-                android:textSize="17dp"
+                android:textSize="15dp"
+                android:justificationMode="inter_word"
                 android:textColor="#000000"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -151,7 +152,7 @@
                 android:id="@+id/showdescription10"
                 android:text="Index 51 - 100:"
                 android:layout_gravity="center"
-                android:paddingTop="0dp"
+                android:paddingTop="2dp"
                 android:paddingBottom="0dp"
                 android:textStyle="bold"
                 android:textSize="17dp"
@@ -162,11 +163,12 @@
 
             <TextView
                 android:id="@+id/showdescription11"
-                android:text="Air quality is acceptable. However, there may be a risk for some people, particularly those who are unusually sensitive to air pollution."
+                android:text="Kvalita vzduchu je přijatelná. Může však existovat riziko pro některé lidi, zejména pro ty, kteří jsou neobvykle citliví na znečištění ovzduší."
                 android:layout_gravity="center"
                 android:paddingTop="0dp"
                 android:paddingBottom="0dp"
-                android:textSize="17dp"
+                android:textSize="15dp"
+                android:justificationMode="inter_word"
                 android:textColor="#000000"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -174,9 +176,9 @@
 
             <TextView
                 android:id="@+id/showdescription12"
-                android:text="Index 101 to 150:"
+                android:text="Index 101 - 150:"
                 android:layout_gravity="center"
-                android:paddingTop="0dp"
+                android:paddingTop="2dp"
                 android:paddingBottom="0dp"
                 android:textSize="17dp"
                 android:textStyle="bold"
@@ -187,11 +189,12 @@
 
             <TextView
                 android:id="@+id/showdescription13"
-                android:text="Members of sensitive groups may experience health effects. The general public is less likely to be affected."
+                android:text="Členové citlivých skupin mohou pociťovat zdravotní účinky. Je méně pravděpodobné, že bude zasažena široká veřejnost."
                 android:layout_gravity="center"
                 android:paddingTop="0dp"
                 android:paddingBottom="0dp"
-                android:textSize="17dp"
+                android:textSize="15dp"
+                android:justificationMode="inter_word"
                 android:textColor="#000000"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -199,9 +202,9 @@
 
             <TextView
                 android:id="@+id/showdescription14"
-                android:text="Index 151 to 200:"
+                android:text="Index 151 - 200:"
                 android:layout_gravity="center"
-                android:paddingTop="0dp"
+                android:paddingTop="2dp"
                 android:paddingBottom="0dp"
                 android:textSize="17dp"
                 android:textStyle="bold"
@@ -212,11 +215,12 @@
 
             <TextView
                 android:id="@+id/showdescription15"
-                android:text="Some members of the general public may experience health effects; members of sensitive groups may experience more serious health effects."
+                android:text="Někteří občané mohou mít účinky na zdraví; členové citlivých skupin mohou mít vážnější účinky na zdraví."
                 android:layout_gravity="center"
                 android:paddingTop="0dp"
                 android:paddingBottom="0dp"
-                android:textSize="17dp"
+                android:textSize="15dp"
+                android:justificationMode="inter_word"
                 android:textColor="#000000"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -224,9 +228,9 @@
 
             <TextView
                 android:id="@+id/showdescription16"
-                android:text="Index 201 to 300:"
+                android:text="Index 201 - 300:"
                 android:layout_gravity="center"
-                android:paddingTop="0dp"
+                android:paddingTop="2dp"
                 android:paddingBottom="0dp"
                 android:textSize="17dp"
                 android:textStyle="bold"
@@ -237,11 +241,38 @@
 
             <TextView
                 android:id="@+id/showdescription17"
-                android:text="Health alert: The risk of health effects is increased for everyone."
+                android:text="Zdravotní upozornění: Riziko účinků na zdraví se zvyšuje pro každého."
                 android:layout_gravity="center"
                 android:paddingTop="0dp"
                 android:paddingBottom="0dp"
+                android:justificationMode="inter_word"
+                android:textSize="15dp"
+                android:textColor="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <TextView
+                android:id="@+id/showdescription18"
+                android:text="Index 301 a více:"
+                android:layout_gravity="center"
+                android:paddingTop="2dp"
+                android:paddingBottom="0dp"
                 android:textSize="17dp"
+                android:textStyle="bold"
+                android:textColor="#8C0E4F"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <TextView
+                android:id="@+id/showdescription19"
+                android:text="Zdravotní varování před nouzovými podmínkami: postiženy špatným ovzduším budou pravděpodobněji všichni."
+                android:layout_gravity="center"
+                android:paddingTop="0dp"
+                android:paddingBottom="0dp"
+                android:justificationMode="inter_word"
+                android:textSize="15dp"
                 android:textColor="#000000"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
