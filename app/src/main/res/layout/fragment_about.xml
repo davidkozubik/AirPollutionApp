@@ -32,7 +32,7 @@
             android:orientation="vertical" >
 
             <TextView
-                android:id="@+id/showdescription16"
+                android:id="@+id/showdescription_1_vyhledaniMista"
                 android:text="1) Vyhledání místa:"
                 android:layout_gravity="left"
                 android:paddingTop="0dp"
@@ -45,7 +45,7 @@
                 />
 
             <TextView
-                android:id="@+id/showdescription17"
+                android:id="@+id/showdescription_1_vyhledaniMista_popis"
                 android:text="zadejte zeměpisnou šířku a délku místa, ve kterém chcete zjistit znečištění. Pokud se v dané lokalitě nenaleznou stanice zjišťující kvalitu ovzduší, zobrazí se Vám nejbližší místo, které v dané lokalitě měří kvalitu vzduchu."
                 android:layout_gravity="left"
                 android:paddingTop="0dp"
@@ -58,7 +58,7 @@
                 />
 
             <TextView
-                android:id="@+id/showdescription18"
+                android:id="@+id/showdescription_2_zobrazeniVysledku"
                 android:text="2) zobrazení výsledků:"
                 android:layout_gravity="left"
                 android:paddingTop="0dp"
@@ -71,7 +71,7 @@
                 />
 
             <TextView
-                android:id="@+id/showdescription19"
+                android:id="@+id/showdescription_2_zobrazeniVysledku_popis"
                 android:text="Nejprve se Vám zobrazí Index kvality ovzduší. Více informací o indexu kvality ovzduší naleznete pod výsledkem. Poté se Vám ukáže stát a dané město (lokalita), ve kterém sledujete kvalitu ovzduší."
                 android:layout_gravity="left"
                 android:paddingTop="0dp"
@@ -84,7 +84,7 @@
                 />
 
             <TextView
-                android:id="@+id/showdescription27"
+                android:id="@+id/showdescription_dotazy"
                 android:text="Máte dotazy?"
                 android:layout_gravity="center"
                 android:paddingTop="6dp"
@@ -97,7 +97,7 @@
                 />
 
                 <TextView
-                    android:id="@+id/showdescription26"
+                    android:id="@+id/showdescription_emailAdress"
                     android:text="davidkozubik@icloud.com"
                     android:layout_gravity="center"
                     android:paddingTop="0dp"
@@ -110,7 +110,5 @@
                     />
 
         </LinearLayout>
-
     </ScrollView>
-
 </LinearLayout>

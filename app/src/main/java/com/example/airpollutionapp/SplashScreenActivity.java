@@ -18,17 +18,7 @@ public class SplashScreenActivity extends AppCompatActivity {
                 .withTargetActivity(MainActivity.class)
                 .withSplashTimeOut(1000)
                 .withBackgroundColor(Color.parseColor("#ffffff"))
-                .withHeaderText("Air Pollution App")
-                .withFooterText("David Kozubík")
-                .withBeforeLogoText("Before logo text")
-                .withAfterLogoText("David Kozubík")
                 .withLogo(R.mipmap.ic_launcher_foreground);
-
-        config.getHeaderTextView().setTextColor(Color.WHITE);
-        config.getFooterTextView().setTextColor(Color.WHITE);
-        config.getBeforeLogoTextView().setTextColor(Color.WHITE);
-        config.getAfterLogoTextView().setTextColor(Color.WHITE);
-
         View easySplashScreen = config.create();
         setContentView(easySplashScreen);
     }

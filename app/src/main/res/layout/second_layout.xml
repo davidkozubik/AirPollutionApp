@@ -28,7 +28,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/showdescription3"
+            android:id="@+id/showdescription_indexKvality"
             android:text="Index kvality ovzduší:"
             android:layout_gravity="center"
             android:paddingTop="3dp"
@@ -40,7 +40,7 @@
             />
 
         <TextView
-            android:id="@+id/translated_text3"
+            android:id="@+id/zobrazitIndex"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingTop="3dp"
@@ -52,7 +52,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/showdescription2"
+        android:id="@+id/showdescription_stat"
         android:text="Stát:"
         android:layout_gravity="center"
         android:paddingTop="3dp"
@@ -63,8 +63,6 @@
         android:layout_height="wrap_content"
         />
 
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -74,21 +72,21 @@
         android:layout_marginTop="8dp">
 
         <TextView
-            android:id="@+id/translated_text"
+            android:id="@+id/zobrazitStat"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_gravity="center_vertical|center_horizontal"
             android:text="string/city"
             android:textAlignment="center"
-            android:background="@color/orange"
+            android:background="@color/lightgray"
             android:paddingTop="8dp"
             android:paddingBottom="8dp"
             android:textColor="@color/black"/>
     </LinearLayout>
 
             <TextView
-                android:id="@+id/showdescription1"
+                android:id="@+id/showdescription_mesto"
                 android:text="Město:"
                 android:layout_gravity="center"
                 android:paddingTop="3dp"
@@ -108,7 +106,7 @@
                 android:layout_marginTop="8dp">
 
                 <TextView
-                    android:id="@+id/translated_text2"
+                    android:id="@+id/zobrazitMesto"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -116,7 +114,7 @@
                     android:layout_gravity="center_vertical|center_horizontal"
                     android:text="string/pressure"
                     android:textAlignment="center"
-                    android:background="@color/orange"
+                    android:background="@color/lightgray"
                     android:padding="8dp"
                     android:textColor="@color/black"/>
 
@@ -131,7 +129,7 @@
                 />
 
             <TextView
-                android:id="@+id/showdescription8"
+                android:id="@+id/showdescription_0_50"
                 android:text="Index 0 - 50:"
                 android:layout_gravity="center"
                 android:paddingTop="2dp"
@@ -144,7 +142,7 @@
                 />
 
             <TextView
-                android:id="@+id/showdescription9"
+                android:id="@+id/showdescription_0_50_popis"
                 android:text="Kvalita ovzduší je uspokojivá a znečištění ovzduší představuje malé nebo žádné riziko."
                 android:layout_gravity="center"
                 android:paddingTop="0dp"
@@ -157,7 +155,7 @@
                 />
 
             <TextView
-                android:id="@+id/showdescription10"
+                android:id="@+id/showdescription_51_100"
                 android:text="Index 51 - 100:"
                 android:layout_gravity="center"
                 android:paddingTop="2dp"
@@ -170,7 +168,7 @@
                 />
 
             <TextView
-                android:id="@+id/showdescription11"
+                android:id="@+id/showdescription_51_100_popis"
                 android:text="Kvalita vzduchu je přijatelná. Může však existovat riziko pro některé lidi, zejména pro ty, kteří jsou neobvykle citliví na znečištění ovzduší."
                 android:layout_gravity="center"
                 android:paddingTop="0dp"
@@ -183,7 +181,7 @@
                 />
 
             <TextView
-                android:id="@+id/showdescription12"
+                android:id="@+id/showdescription_101_150"
                 android:text="Index 101 - 150:"
                 android:layout_gravity="center"
                 android:paddingTop="2dp"
@@ -196,7 +194,7 @@
                 />
 
             <TextView
-                android:id="@+id/showdescription13"
+                android:id="@+id/showdescription_101_150_popis"
                 android:text="Členové citlivých skupin mohou pociťovat zdravotní účinky. Je méně pravděpodobné, že bude zasažena široká veřejnost."
                 android:layout_gravity="center"
                 android:paddingTop="0dp"
@@ -209,7 +207,7 @@
                 />
 
             <TextView
-                android:id="@+id/showdescription14"
+                android:id="@+id/showdescription_151_200"
                 android:text="Index 151 - 200:"
                 android:layout_gravity="center"
                 android:paddingTop="2dp"
@@ -222,7 +220,7 @@
                 />
 
             <TextView
-                android:id="@+id/showdescription15"
+                android:id="@+id/showdescription_151_200_popis"
                 android:text="Někteří občané mohou mít účinky na zdraví; členové citlivých skupin mohou mít vážnější účinky na zdraví."
                 android:layout_gravity="center"
                 android:paddingTop="0dp"
@@ -235,7 +233,7 @@
                 />
 
             <TextView
-                android:id="@+id/showdescription16"
+                android:id="@+id/showdescription_201_300"
                 android:text="Index 201 - 300:"
                 android:layout_gravity="center"
                 android:paddingTop="2dp"
@@ -248,7 +246,7 @@
                 />
 
             <TextView
-                android:id="@+id/showdescription17"
+                android:id="@+id/showdescription_201_300_popis"
                 android:text="Zdravotní upozornění: Riziko účinků na zdraví se zvyšuje pro každého."
                 android:layout_gravity="center"
                 android:paddingTop="0dp"
@@ -261,7 +259,7 @@
                 />
 
             <TextView
-                android:id="@+id/showdescription18"
+                android:id="@+id/showdescription_300_a_vice"
                 android:text="Index 301 a více:"
                 android:layout_gravity="center"
                 android:paddingTop="2dp"
@@ -274,7 +272,7 @@
                 />
 
             <TextView
-                android:id="@+id/showdescription19"
+                android:id="@+id/showdescription_300_a_vice_popis"
                 android:text="Zdravotní varování před nouzovými podmínkami: postiženy špatným ovzduším budou pravděpodobněji všichni."
                 android:layout_gravity="center"
                 android:paddingTop="0dp"
@@ -285,12 +283,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 />
-
         </LinearLayout>
-
     </ScrollView>
-
-
-
-
 </LinearLayout>

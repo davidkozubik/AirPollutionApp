@@ -46,7 +46,7 @@
         android:text="Vyhledat"/>
 
     <TextView
-        android:id="@+id/showdescription10"
+        android:id="@+id/showdescription_vyzkousejte"
         android:text="Vyzkoušejte:"
         android:layout_gravity="center"
         android:paddingTop="40dp"
@@ -62,7 +62,7 @@
         />
 
     <TextView
-        android:id="@+id/showdescription9"
+        android:id="@+id/showdescription_vyzkousejte_popis"
         android:text="Pokud nezadáte žádná data, zobrazí se nejbližší místo v blízkosti Vaší lokality."
         android:layout_gravity="center"
         android:paddingLeft="10dp"

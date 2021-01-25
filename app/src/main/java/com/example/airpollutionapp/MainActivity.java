@@ -68,8 +68,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
-
     public void myButtonClick(View v)
     {
         EditText jzemDelka;
@@ -86,17 +84,14 @@ public class MainActivity extends AppCompatActivity {
 
         // now by putExtra method put the value in key, value pair
         // key is message_key by this key we will receive the value, and put the string
-
         intent.putExtra("message_key_delka", delka);
         intent.putExtra("message_key_sirka", sirka);
 
-        writeToExternalMemory("delka: "+delka+" sirka: "+sirka+"\n");
+        writeToExternalMemory("délka: "+delka+"/ šířka: "+sirka+"\n");
 
         // start the Intent
         startActivity(intent);
     }
-
-
 
     private BottomNavigationView.OnNavigationItemSelectedListener bottomNavMethod=new
             BottomNavigationView.OnNavigationItemSelectedListener() {

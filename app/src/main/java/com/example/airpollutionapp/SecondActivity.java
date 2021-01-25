@@ -41,10 +41,11 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import android.widget.Button;
 import android.text.TextUtils;
+import android.graphics.Color;
 
 public class SecondActivity  extends AppCompatActivity implements OnMapReadyCallback
 {
-
+    //private GpsTracker gpsTracker;
     GoogleMap map;
     TextView textView;
     TextView textView2;
@@ -59,11 +60,9 @@ public class SecondActivity  extends AppCompatActivity implements OnMapReadyCall
         setContentView(R.layout.second_layout);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        textView = (TextView) findViewById(R.id.translated_text);
-        textView2 = (TextView) findViewById(R.id.translated_text2);
-        textView3 = (TextView) findViewById(R.id.translated_text3);
-
-
+        textView = (TextView) findViewById(R.id.zobrazitStat);
+        textView2 = (TextView) findViewById(R.id.zobrazitMesto);
+        textView3 = (TextView) findViewById(R.id.zobrazitIndex);
 
         // create the get Intent object
         Intent intent = getIntent();
@@ -104,20 +103,43 @@ public class SecondActivity  extends AppCompatActivity implements OnMapReadyCall
 
                             // 3. Z PROMENNE responseData ZISKAME "translatedText" (viz struktura JSONu odpovedi)
                             // V PROMENNE translatedText JE ULOZEN VYSLEDEK PREKLADU
-                            String translatedText = responseData.getString("country");
-                            String translatedText2 = responseData.getString("city");
-                            String translatedText3 = responseData3.getString("aqius");
+                            String zobrazitStat = responseData.getString("country");
+                            String zobrazitMesto = responseData.getString("city");
+                            String zobrazitIndex = responseData3.getString("aqius");
 
                             // 4. V textView ZOBRAZIME VYSLEDEK PREKLADU
-                            String[] pole = {translatedText};
+                            String[] pole = {zobrazitStat};
                             textView.setText(TextUtils.join(",",pole));
 
-                            String[] pole2 = {translatedText2};
+                            String[] pole2 = {zobrazitMesto};
                             textView2.setText(TextUtils.join(",",pole2));
 
-                            String[] pole3 = {translatedText3};
+                            String[] pole3 = {zobrazitIndex};
                             textView3.setText(TextUtils.join(",",pole3));
-
+                            if(Integer.parseInt(pole3[0]) <= 50)
+                            {
+                                textView3.setBackgroundColor(Color.parseColor("#23FC01"));
+                            }
+                            else if((Integer.parseInt(pole3[0]) <= 100) && (Integer.parseInt(pole3[0]) >= 51))
+                            {
+                                textView3.setBackgroundColor(Color.parseColor("#FCE901"));
+                            }
+                            else if((Integer.parseInt(pole3[0]) <= 150) && (Integer.parseInt(pole3[0]) >= 101))
+                            {
+                                textView3.setBackgroundColor(Color.parseColor("#FC8201"));
+                            }
+                            else if((Integer.parseInt(pole3[0]) <= 200) && (Integer.parseInt(pole3[0]) >= 151))
+                            {
+                                textView3.setBackgroundColor(Color.parseColor("#FC0101"));
+                            }
+                            else if((Integer.parseInt(pole3[0]) <= 300) && (Integer.parseInt(pole3[0]) >= 201))
+                            {
+                                textView3.setBackgroundColor(Color.parseColor("#7D0A72"));
+                            }
+                            else if(Integer.parseInt(pole3[0]) >= 301)
+                            {
+                                textView3.setBackgroundColor(Color.parseColor("#8C0E4F"));
+                            }
                         }
                         catch (JSONException e)
                         {
@@ -138,6 +160,7 @@ public class SecondActivity  extends AppCompatActivity implements OnMapReadyCall
         queue.add(stringRequest);
     }
 
+
     @Override
     public void onMapReady(GoogleMap googleMap) {
         map = googleMap;
@@ -152,8 +175,16 @@ public class SecondActivity  extends AppCompatActivity implements OnMapReadyCall
         }
         else
         {
-            s = 49.22439;
-            d = 17.66253;
+        //    gpsTracker = new GpsTracker(this);
+          //  if(gpsTracker.canGetLocation()){
+            //    s = gpsTracker.getLatitude();
+              //  d = gpsTracker.getLongitude();
+            //}
+          //  else
+            //    {
+                s = 49.22436;
+                d = 17.66254;
+              //  }
         }
 
         LatLng Prague = new LatLng(s, d);
