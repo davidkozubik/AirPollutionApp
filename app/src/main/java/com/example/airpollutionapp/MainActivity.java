@@ -25,10 +25,17 @@ import org.json.JSONObject;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Environment;
+import java.io.File;
+import java.io.FileOutputStream;
+import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
 
     private BottomNavigationView bottomNavigationView;
+    final static String appFileName = "appFile.txt";
+    final static String appDirName = "/appDir/";
+    final static String appDirPath = Environment.getExternalStorageDirectory().getAbsolutePath() + appDirName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +47,28 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigationView.setOnNavigationItemSelectedListener(bottomNavMethod);
         getSupportFragmentManager().beginTransaction().replace(R.id.container, new HomeFragment()).commit();
     }
+
+
+    private boolean writeToExternalMemory(String dataToWrite)
+    {
+        try
+        {
+            File appDir = new File(appDirPath);
+                appDir.mkdir();
+                FileOutputStream fos = new FileOutputStream(appDirPath + appFileName,true);
+                fos.write(dataToWrite.getBytes());
+                fos.flush();
+                fos.close();
+
+            return true;
+        }
+        catch (Exception e)
+        {
+            return false;
+        }
+    }
+
+
 
     public void myButtonClick(View v)
     {
@@ -60,6 +89,8 @@ public class MainActivity extends AppCompatActivity {
 
         intent.putExtra("message_key_delka", delka);
         intent.putExtra("message_key_sirka", sirka);
+
+        writeToExternalMemory("delka: "+delka+" sirka: "+sirka+"\n");
 
         // start the Intent
         startActivity(intent);

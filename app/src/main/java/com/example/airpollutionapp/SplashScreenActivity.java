@@ -22,7 +22,7 @@ public class SplashScreenActivity extends AppCompatActivity {
                 .withFooterText("David Kozubík")
                 .withBeforeLogoText("Before logo text")
                 .withAfterLogoText("David Kozubík")
-                .withLogo(R.mipmap.ic_launcher);
+                .withLogo(R.mipmap.ic_launcher_foreground);
 
         config.getHeaderTextView().setTextColor(Color.WHITE);
         config.getFooterTextView().setTextColor(Color.WHITE);

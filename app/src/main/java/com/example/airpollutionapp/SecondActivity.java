@@ -10,11 +10,21 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+
 import android.view.View;
 import android.widget.Toast;
 import android.widget.EditText;
 import android.os.Bundle;
 import android.view.MenuItem;
+
+import com.google.android.gms.maps.CameraUpdate;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import android.content.Intent;
 import android.view.View;
@@ -32,8 +42,10 @@ import org.json.JSONObject;
 import android.widget.Button;
 import android.text.TextUtils;
 
-public class SecondActivity  extends AppCompatActivity
+public class SecondActivity  extends AppCompatActivity implements OnMapReadyCallback
 {
+
+    GoogleMap map;
     TextView textView;
     TextView textView2;
     TextView textView3;
@@ -51,6 +63,8 @@ public class SecondActivity  extends AppCompatActivity
         textView2 = (TextView) findViewById(R.id.translated_text2);
         textView3 = (TextView) findViewById(R.id.translated_text3);
 
+
+
         // create the get Intent object
         Intent intent = getIntent();
 
@@ -59,6 +73,9 @@ public class SecondActivity  extends AppCompatActivity
         delka = intent.getStringExtra("message_key_delka");
         sirka = intent.getStringExtra("message_key_sirka");
         getTranslationOnClick();
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
     }
 
     public void getTranslationOnClick()
@@ -121,4 +138,26 @@ public class SecondActivity  extends AppCompatActivity
         queue.add(stringRequest);
     }
 
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        map = googleMap;
+
+        double s;
+        double d;
+
+        if (!sirka.equals("") && !delka.equals(""))
+        {
+            s = Double.parseDouble(sirka);
+            d = Double.parseDouble(delka);
+        }
+        else
+        {
+            s = 49.22439;
+            d = 17.66253;
+        }
+
+        LatLng Prague = new LatLng(s, d);
+        map.addMarker(new MarkerOptions().position(Prague).title("Prague"));
+        map.moveCamera(CameraUpdateFactory.newLatLng(Prague));
+    }
 }
