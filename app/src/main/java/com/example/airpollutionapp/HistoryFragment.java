@@ -71,8 +71,5 @@ public class HistoryFragment extends Fragment {
         historickyText = v.findViewById(R.id.historickyText);
         readFromExternalMemory();
         return v;
-
-        //return inflater.inflate(R.layout.fragment_history, container, false);
-
     }
 }

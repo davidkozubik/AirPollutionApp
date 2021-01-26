@@ -48,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction().replace(R.id.container, new HomeFragment()).commit();
     }
 
-
     private boolean writeToExternalMemory(String dataToWrite)
     {
         try

@@ -79,11 +79,11 @@ public class SecondActivity  extends AppCompatActivity implements OnMapReadyCall
 
     public void getTranslationOnClick()
     {
-        // Instantiate the RequestQueue.
+        // vytvořím instanci RequestQueue.
         RequestQueue queue = Volley.newRequestQueue(this);
         String url ="https://api.airvisual.com/v2/nearest_city?lat="+sirka+"&lon="+delka+ "&key=b7f6e7a9-f780-4c1c-a60b-411feb253d92";
 
-        // Request a string response from the provided URL.
+        // Vyžádání řetězcové odpovědi z poskytnuté adresy URL.
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                 new Response.Listener<String>()
                 {
@@ -101,13 +101,13 @@ public class SecondActivity  extends AppCompatActivity implements OnMapReadyCall
                             JSONObject responseData2 = responseData.getJSONObject("current");
                             JSONObject responseData3 = responseData2.getJSONObject("pollution");
 
-                            // 3. Z PROMENNE responseData ZISKAME "translatedText" (viz struktura JSONu odpovedi)
-                            // V PROMENNE translatedText JE ULOZEN VYSLEDEK PREKLADU
+                            // 3. Z PROMENNE responseData ZISKAME "zobrazit_" (viz struktura JSONu odpovedi)
+                            // V PROMENNE zobrazit_ JE ULOZEN VYSLEDEK
                             String zobrazitStat = responseData.getString("country");
                             String zobrazitMesto = responseData.getString("city");
                             String zobrazitIndex = responseData3.getString("aqius");
 
-                            // 4. V textView ZOBRAZIME VYSLEDEK PREKLADU
+                            // 4. V textView ZOBRAZIME VYSLEDEK
                             String[] pole = {zobrazitStat};
                             textView.setText(TextUtils.join(",",pole));
 
@@ -116,6 +116,7 @@ public class SecondActivity  extends AppCompatActivity implements OnMapReadyCall
 
                             String[] pole3 = {zobrazitIndex};
                             textView3.setText(TextUtils.join(",",pole3));
+
                             if(Integer.parseInt(pole3[0]) <= 50)
                             {
                                 textView3.setBackgroundColor(Color.parseColor("#23FC01"));
@@ -187,8 +188,8 @@ public class SecondActivity  extends AppCompatActivity implements OnMapReadyCall
               //  }
         }
 
-        LatLng Prague = new LatLng(s, d);
-        map.addMarker(new MarkerOptions().position(Prague).title("Prague"));
-        map.moveCamera(CameraUpdateFactory.newLatLng(Prague));
+        LatLng OznaceneMisto = new LatLng(s, d);
+        map.addMarker(new MarkerOptions().position(OznaceneMisto).title("OznaceneMisto"));
+        map.moveCamera(CameraUpdateFactory.newLatLng(OznaceneMisto));
     }
 }
